@@ -23,7 +23,6 @@ def login_for_medal(request):
         data['status'] = 'ERROR'
     return JsonResponse(data)
 
-
 def login(request):
     if request.method == 'POST':
         login_form = LoginForm(request.POST)

@@ -248,7 +248,7 @@
                         liked_num.text(data['liked_num']);
                     }else{
                         if(data['code']==400){
-                            window.location.href = '{% url 'login' %}?from={{ request.GET.from }}';
+                            window.location.href = '{% url 'login' %}?from={{ request.get_full_path }}';
                         }else{
                             alert(data['message']);
                         }
